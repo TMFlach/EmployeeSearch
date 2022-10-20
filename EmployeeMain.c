@@ -9,7 +9,8 @@ int main(void){
 
     PtrToEmployee searchEmployeeByNumber(const Employee table[], int sizeTable, long numberToFind); 
     PtrToEmployee searchEmployeeByName(const Employee table[], int sizeTable, char * nameToFind); 
-    PtrToEmployee searchEmployeeByPhone(const Employee table[], int sizeTable, char * nameToFind);
+    PtrToEmployee searchEmployeeByPhone(const Employee table[], int sizeTable, char * phoneToFind);
+    PtrToEmployee searchEmployeeBySalary(const Employee table[], int sizeTable, double salaryToFind);
  
 
     //defined in employeeTable.c 
@@ -35,7 +36,7 @@ int main(void){
     else 
         printf("Employee phone number 123-456-7890 is NOT found in the record\n");
 
-    /*
+    
     matchPtr = searchEmployeeBySalary(EmployeeTable, EmployeeTableEntries, 7.80); 
     //salary example found 
     if (matchPtr != NULL) 
@@ -48,7 +49,7 @@ int main(void){
         printf("Employee salary is in record %d\n", matchPtr - EmployeeTable); 
     else 
         printf("Employee salary 12.34 is NOT found in the record\n");  
-    */
+    
     return EXIT_SUCCESS; 
 
 } 
