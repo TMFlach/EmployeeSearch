@@ -43,5 +43,19 @@ PtrToEmployee searchEmployeeByName(PtrToConstEmployee ptr, int tableSize, char *
 } 
 
 //Create function for searching by phone number
+PtrToEmployee searchEmployeeByPhone(PtrToConstEmployee ptr, int tableSize, char * targetPhone) {
+    const PtrToConstEmployee endPtr = ptr + tableSize; 
 
+    for(; ptr < endPtr; ptr++) 
+
+    { 
+
+        if(strcmp(ptr->phone,targetPhone) == 0) 
+
+            return (PtrToEmployee) ptr; 
+
+    } 
+
+    return NULL; 
+}
 //Create function for searching by salary
