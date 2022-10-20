@@ -31,7 +31,9 @@ static int compareEmployeeName(const void *targetPtr, PtrToConstEmployee tableVa
 }
 
 //create compare function for employee phone number.
-
+static int compareEmployeePhone(const void *targetPtr, PtrToConstEmployee tableValuePtr) {
+    return strcmp((char *) targetPtr, tableValuePtr->phone);
+}
 //create compare function for employee salary
 
 
@@ -46,5 +48,8 @@ PtrToEmployee searchEmployeeByName(PtrToConstEmployee ptr, int size, char* name)
 } 
 
 //create wrapper for search by phone number
-
+PtrToEmployee searchEmployeeByPhone(PtrToConstEmployee ptr, int size, char* phone) 
+{ 
+    return searchEmployeeTable(ptr, size, phone, compareEmployeePhone); 
+} 
 //create wrapper for search by salary.
